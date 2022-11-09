@@ -1,0 +1,18 @@
+{
+  "name": "hexagonal-arch",
+  "version": "10.0.1",
+  "description": "Projeto para a prática de arquitetura hexagonal",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/renatabfs/hexagonal-arch"
+  },
+  "keywords": [
+    "hexagonal"
+  ],
+  "author": "renatabfs",
+  "license": "ISC"
+}
