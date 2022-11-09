@@ -14,5 +14,8 @@
     "hexagonal"
   ],
   "author": "renatabfs",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
 }
