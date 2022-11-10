@@ -1,22 +1,27 @@
-import IDemandService from '../interfaces/services/IDemandService';
-import Demand from '../domain/models/Demand';
-
+import Demand from "../domain/models/Demand";
+import IDemandService from "../interfaces/services/IDemandService";
 
 class DemandService extends IDemandService {
-    create(demand: Demand): Promise<boolean> {
-        return this.adapter.create(demand);
-    }
-    fetch(): Promise<Demand[]> {
-       return this.adapter.fetch();
-    }
-    update(demand: Demand): Promise<boolean> {
-       return this.adapter.update(demand);
-    }
-    delete(demandId: number): Promise<boolean> {
-       return this.adapter.delete(demandId)
-    }
-    fetchByAccount(accountId: number): Promise<Demand[]> {
-       return this.adapter.fetchByAccount(accountId);
-    }
+   fetch(): Promise<Demand[]> {
+      return this.adapter.fetch();
+   }
+   fetchByAccount(accountId: number): Promise<Demand[]> {
+      return this.adapter.fetchByAccount(accountId);
+   }
+   async create(demand: Demand): Promise<boolean> {
+      const demandId = await this.adapter.create(demand);
+      for (const foodId of demand.foodIds) {
+         await this.demandFoodAdapter.create(demandId, foodId);
+      }
+      return true;
+   }                  
 
-}export default DemandService;
+   update(demand: Demand): Promise<boolean> {
+      return this.adapter.update(demand);
+   }
+   delete(demandId: number): Promise<boolean> {
+      return this.adapter.delete(demandId);
+   }
+}
+
+export default DemandService;
