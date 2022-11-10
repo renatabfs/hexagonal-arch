@@ -1,7 +1,7 @@
 import DemandAdapter from "../../../../../interfaces/adapter/DemandAdapter";
 import { DTO } from "../../../../types/DTO";
 import Demand from '../../../Demand'
-import { APIClient } from "../clients/APIClients";
+import { APIClient } from "../clients/APIClient";
 
 class DemandAPI extends DemandAdapter {
    async fetch(): Promise<Demand[]> {

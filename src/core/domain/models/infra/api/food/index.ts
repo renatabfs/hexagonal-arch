@@ -1,7 +1,7 @@
 import FoodAdapter from "../../../../../interfaces/adapter/FoodAdapter";
 import { DTO } from "../../../../types/DTO";
 import Food from "../../../Food";
-import { APIClient } from "../clients/APIClients";
+import { APIClient } from "../clients/APIClient";
 
 class FoodAPI extends FoodAdapter {
     async fetch(): Promise<Food[]> {
