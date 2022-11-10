@@ -13,6 +13,12 @@ class FoodAPI extends FoodAdapter {
         await APIClient.post("/foods", food.toJSON());
         return true;
     }
+    delete(foodId: number): Promise<boolean> {
+        throw new Error("Method not implemented.");
+    }
+    update(food: Food): Promise<boolean> {
+        throw new Error("Method not implemented.");
+    }
 }
 
 export default FoodAPI;
