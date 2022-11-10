@@ -1,6 +1,6 @@
-import DemandAdapter from "../../../../../interfaces/adapter/DemandAdapter";
-import { DTO } from "../../../../types/DTO";
-import Demand from '../../../Demand'
+import Demand from "../../../core/domain/models/Demand";
+import { DTO } from "../../../core/domain/types/DTO";
+import DemandAdapter from "../../../core/interfaces/adapter/DemandAdapter";
 import { APIClient } from "../clients/APIClient";
 
 class DemandAPI extends DemandAdapter {

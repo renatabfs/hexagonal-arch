@@ -1,6 +1,6 @@
-import FoodAdapter from "../../../../../interfaces/adapter/FoodAdapter";
-import { DTO } from "../../../../types/DTO";
-import Food from "../../../Food";
+import Food from "../../../core/domain/models/Food";
+import { DTO } from "../../../core/domain/types/DTO";
+import FoodAdapter from "../../../core/interfaces/adapter/FoodAdapter";
 import { APIClient } from "../clients/APIClient";
 
 class FoodAPI extends FoodAdapter {
